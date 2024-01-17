@@ -1,0 +1,17 @@
+ <!DOCTYPE html>
+
+ {% extends "home.html" %} 
+ {% load static %}
+ {% block content %}
+
+    <h1>Login</h1>
+        <form action="{% url 'account:login' %}"  method="post">
+            {% csrf_token %}
+            
+                {{form}}
+
+            <input type='submit' value='Longin' />
+        </form>
+  
+        {% endblock content %}
+
